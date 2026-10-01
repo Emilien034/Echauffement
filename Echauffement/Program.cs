@@ -41,6 +41,8 @@ class Program
         Console.WriteLine("Tu as 4 choix d'armes:");
         Console.WriteLine("1. Un tomahawk à 100 euros.");
         Console.WriteLine("2. Un revolver à 250 euros.");
+        Console.WriteLine("3. Un Fusil à pompe à 500 euros.");
+        Console.WriteLine("4. Un Pistolet Mauser à 1000 euros.");
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
