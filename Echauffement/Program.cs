@@ -38,7 +38,7 @@ class Program
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
-        Console.WriteLine("Tu as 4 choix d'armes:");
+        Console.WriteLine("Tu as 4 choix d'armes à acheter:");
         Console.WriteLine("1. Un tomahawk à 100 euros.");
         Console.WriteLine("2. Un revolver à 250 euros.");
         Console.WriteLine("3. Un Fusil à pompe à 500 euros.");
@@ -50,6 +50,55 @@ class Program
         int choix = Convert.ToInt32(Console.ReadLine());
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
+
+        if (choix == 1)
+        {
+            if (euros >= 100 && age >= 18)
+            {
+                euros = euros - 100;
+                Console.WriteLine("Tu as bien acheté le Tomahawk, il te reste "+euros+" euros.");
+            }
+            else
+            {
+                Console.WriteLine("Tu n'as pas assez d'euros ou tu n'est pas majeur.");
+            }
+        }
+        if (choix == 2)
+        {
+            if (euros >= 250 && age >= 18)
+            {
+                euros = euros - 250;
+                Console.WriteLine("Tu as bien acheté le Revolver, il te reste " + euros + " euros.");
+            }
+            else
+            {
+                Console.WriteLine("Tu n'as pas assez d'euros ou tu n'est pas majeur.");
+            }
+        }
+        if (choix == 3)
+        {
+            if (euros >= 500 && age >= 18)
+            {
+                euros = euros - 500;
+                Console.WriteLine("Tu as bien acheté le Fusil à pompe, il te reste " + euros + " euros.");
+            }
+            else
+            {
+                Console.WriteLine("Tu n'as pas assez d'euros ou tu n'est pas majeur.");
+            }
+        }
+        if (choix == 4)
+        {
+            if (euros >= 1000 && age >= 18)
+            {
+                euros = euros - 1000;
+                Console.WriteLine("Tu as bien acheté le Pistolet Mauser, il te reste " + euros + " euros.");
+            }
+            else
+            {
+                Console.WriteLine("Tu n'as pas assez d'euros ou tu n'est pas majeur.");
+            }
+        }
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
         // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
